@@ -17,11 +17,11 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
-        return render_template('index.html', result="No file uploaded")
+        return render_template('index.html', result="No file uploaded", error=True)
     
     file = request.files['file']
     if file.filename == '':
-        return render_template('index.html', result="No file selected")
+        return render_template('index.html', result="No file selected", error=True)
     
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(filepath)
@@ -36,7 +36,7 @@ def predict():
     result = "Pneumonia" if prediction > 0.5 else "Normal"
 
     # Retourner le résultat
-    return render_template('index.html', result=result, image_path=filepath)
+    return render_template('index.html', result=result, image_path=filepath, error=False)
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):

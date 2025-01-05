@@ -1,21 +1,80 @@
+/* Style de base */
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
     text-align: center;
-    margin: 20px;
+    color: #333;
 }
+
+/* Titres */
 h1 {
-    color: #4CAF50;
+    color: #6a11cb;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
-form {
-    margin-top: 20px;
-}
-button {
-    background-color: #4CAF50;
-    color: white;
+
+/* Boutons */
+.upload-btn {
+    background: linear-gradient(to right, #a591bb, #2575fc);
     border: none;
+    color: #fff;
+    font-size: 1.2rem;
     padding: 10px 20px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: 0.3s;
 }
-button:hover {
-    background-color: #45a049;
+.upload-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+/* Résultats */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.text-success {
+    color: green;
+}
+.text-danger {
+    color: red;
+}
+
+/* Image */
+.result-image {
+    max-width: 70%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pied de page */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
 }
